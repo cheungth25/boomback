@@ -3,8 +3,7 @@ Rails.application.configure do
   # config.action_cable.url = "wss://immense-scrubland-57490.herokuapp.com/cable"
 
 
-  config.web_socket_server_url = "wws://immense-scrubland-57490.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://immense-scrubland-57490.herokuapp.com', 'http://immense-scrubland-57490.herokuapp.com/']
+
   # config.middleware.use ???
 
   # Code is not reloaded between requests.
@@ -46,9 +45,12 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Mount Action Cable outside main process or domain
-  # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://example.com/cable'
+  config.action_cable.mount_path = "/cable"
+  config.action_cable.url = "wss://immense-scrubland-57490.herokuapp.com/cable"
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+
+  # config.web_socket_server_url = "wws://immense-scrubland-57490.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://immense-scrubland-57490.herokuapp.com', 'http://immense-scrubland-57490.herokuapp.com', /http:\/\/immense-scrubland-57490.herokuapp.com/, /https:\/\/immense-scrubland-57490.herokuapp.com/, 'http://localhost:3001', /http:\/\/localhost:*/]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
