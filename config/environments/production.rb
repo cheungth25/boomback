@@ -50,7 +50,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # config.web_socket_server_url = "wws://immense-scrubland-57490.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://immense-scrubland-57490.herokuapp.com', 'http://immense-scrubland-57490.herokuapp.com', /http:\/\/immense-scrubland-57490.herokuapp.com/, /https:\/\/immense-scrubland-57490.herokuapp.com/, 'http://localhost:3001', /http:\/\/localhost:*/]
+  config.action_cable.allowed_request_origins = ['https://immense-scrubland-57490.herokuapp.com', 'http://immense-scrubland-57490.herokuapp.com', /http:\/\/immense-scrubland-57490.herokuapp.com/, /https:\/\/immense-scrubland-57490.herokuapp.com/, 'http://localhost:3001', /http:\/\/localhost:*/, 'https://thawing-basin-84338.herokuapp.com', 'https://thawing-basin-84338.herokuapp.com', /https:\/\/thawing-basin-84338.herokuapp.com*/, /http:\/\/thawing-basin-84338.herokuapp.com*/]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
