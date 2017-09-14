@@ -86,13 +86,13 @@ class Game < ApplicationRecord
           when 2
             destroyList << entity.id
             left = x-entity.x
-          when 3
-            destroyList << entity.id
-            temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
-            destroyList = (destroyList + temp_hash[:destroyList]).uniq
-            x_list = (x_list + temp_hash[:x_list]).uniq
-            y_list = (y_list + temp_hash[:y_list]).uniq
-            temp_hash = {}
+          # when 3
+          #   destroyList << entity.id
+          #   temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
+          #   destroyList = (destroyList + temp_hash[:destroyList]).uniq
+          #   x_list = (x_list + temp_hash[:x_list]).uniq
+          #   y_list = (y_list + temp_hash[:y_list]).uniq
+          #   temp_hash = {}
           end
         elsif (y==entity.y && ((x+right) >= entity.x) && !(entity.x<x)) #right
           case entity.entity_type
@@ -101,13 +101,13 @@ class Game < ApplicationRecord
           when 2
             destroyList << entity.id
             right = entity.x-x
-          when 3
-            destroyList << entity.id
-            temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
-            destroyList = (destroyList + temp_hash[:destroyList]).uniq
-            x_list = (x_list + temp_hash[:x_list]).uniq
-            y_list = (y_list + temp_hash[:y_list]).uniq
-            temp_hash = {}
+          # when 3
+          #   destroyList << entity.id
+          #   temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
+          #   destroyList = (destroyList + temp_hash[:destroyList]).uniq
+          #   x_list = (x_list + temp_hash[:x_list]).uniq
+          #   y_list = (y_list + temp_hash[:y_list]).uniq
+          #   temp_hash = {}
           end
 
         elsif (x==entity.x && ((y-up) <= entity.y) && !(entity.y>y)) #up
@@ -117,13 +117,13 @@ class Game < ApplicationRecord
           when 2
             destroyList << entity.id
             up = y-entity.y
-          when 3
-            destroyList << entity.id
-            temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
-            destroyList = (destroyList + temp_hash[:destroyList]).uniq
-            x_list = (x_list + temp_hash[:x_list]).uniq
-            y_list = (y_list + temp_hash[:y_list]).uniq
-            temp_hash = {}
+          # when 3
+          #   destroyList << entity.id
+          #   temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
+          #   destroyList = (destroyList + temp_hash[:destroyList]).uniq
+          #   x_list = (x_list + temp_hash[:x_list]).uniq
+          #   y_list = (y_list + temp_hash[:y_list]).uniq
+          #   temp_hash = {}
           end
 
         elsif (x==entity.x && ((y+down) >= entity.y) && !(entity.y<y)) #down
@@ -133,13 +133,13 @@ class Game < ApplicationRecord
           when 2
             destroyList << entity.id
             down = entity.y-y
-          when 3
-            destroyList << entity.id
-            temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
-            destroyList = (destroyList + temp_hash[:destroyList]).uniq
-            x_list = (x_list + temp_hash[:x_list]).uniq
-            y_list = (y_list + temp_hash[:y_list]).uniq
-            temp_hash = {}
+          # when 3
+          #   destroyList << entity.id
+          #   temp_hash = self.calculateBlast(entity.bomb_str, entity.x, entity.y, destroyList)
+          #   destroyList = (destroyList + temp_hash[:destroyList]).uniq
+          #   x_list = (x_list + temp_hash[:x_list]).uniq
+          #   y_list = (y_list + temp_hash[:y_list]).uniq
+          #   temp_hash = {}
           end
 
         end #if center, left, right, up or down
