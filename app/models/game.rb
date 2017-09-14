@@ -160,4 +160,14 @@ class Game < ApplicationRecord
     return {destroyList:destroyList.uniq, x_list:x_list.uniq, y_list:y_list.uniq}
   end
 
+  def force
+    self.update(started:false)
+    Entity.delete_all
+    Character.delete_all
+    Player.all.each{|player|
+      ActionCable.server.broadcast 'game_room_channel', data: {type: 'disconnect', user_id:player.id}
+    }
+    Player.delete_all
+  end
+
 end
