@@ -1,7 +1,7 @@
 class Character < ApplicationRecord
   belongs_to :player
   TILE_SIZE = 48
-  PLAYER_POS = [{x:48, y:48}, {x:48, y:528}]
+  PLAYER_POS = [{x:48, y:48}, {x:48, y:528}, {x:624, y:48}, {x:624, y:528}]
 
   def show_info
     self.reload

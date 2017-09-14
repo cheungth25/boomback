@@ -29,7 +29,7 @@ class GameRoomChannel < ApplicationCable::Channel
       if @game.only_players.length == 0
         @player.update(game_owner: true, spectator: false)
         ActionCable.server.broadcast 'game_room_channel', data: {type: 'add_player', users_info: @game.users_info}
-      elsif ((@game.only_players.length > 0) && (@game.only_players.length < 2))
+      elsif ((@game.only_players.length > 0) && (@game.only_players.length < 4))
         @player.update(spectator: false)
         @game.only_players.first.update(game_owner: true) if !@game.owner
         ActionCable.server.broadcast 'game_room_channel', data: {type: 'add_player', users_info: @game.users_info}
