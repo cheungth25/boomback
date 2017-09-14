@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_cable.url = "ws://immense-scrubland-57490.herokuapp.com/cable"
+  config.action_cable.url = "wss://immense-scrubland-57490.herokuapp.com/cable"
 
 
   config.action_cable.allowed_request_origins = ['https://immense-scrubland-57490.herokuapp.com', 'http://immense-scrubland-57490.herokuapp.com/']
