@@ -113,29 +113,3 @@ class GameRoomChannel < ApplicationCable::Channel
   end
 
 end
-
-
-# entity:
-#   -type, x, y
-
-# task = Concurrent::TimerTask.new(execution_interval: 5, timeout_interval: 5) do
-#        puts 'Boom!'
-#      end
-# task.execute
-# task.shutdown
-
-# 13x4(52) 7x3(21) 9x2(18) 5x2(10) = (101)bricks
-# bombs
-# characters
-
-#entity types: (has collision)
-# 1-walls
-# 2-bricks
-# 3-bombs
-# ??
-
-#characters: (no collision but needs to rerender)
-
-#static animations (after entity deletion)
-# -character deaths
-# -bomb explosions

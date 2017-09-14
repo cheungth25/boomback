@@ -1,10 +1,10 @@
+production:
+  adapter: redis
+  url: redis://redistogo:8c056998a63444058504ecd87234df72@chubb.redistogo.com:9399/
+  # channel_prefix: boomback_production
+
 development:
   adapter: async
 
 test:
   adapter: async
-
-production:
-  adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: boomback_production
